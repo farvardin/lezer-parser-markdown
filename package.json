@@ -1,6 +1,6 @@
 {
   "name": "@farvardin/lezer-parser-markdown",
-  "version": "1.6.3",
+  "version": "1.6.5",
   "description": "Incremental Markdown parser that consumes and emits Lezer trees (txt2tags version)",
   "main": "dist/index.cjs",
   "type": "module",

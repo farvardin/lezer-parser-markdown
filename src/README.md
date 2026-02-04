@@ -1,9 +1,10 @@
 <!-- /README.md is generated from /src/README.md -->
 
-# @lezer/markdown
+# @farvardin/lezer-parser-markdown
 
-This is an incremental Markdown ([CommonMark](https://commonmark.org/)
-with support for extension) parser that integrates well with the
+fork of https://www.npmjs.com/package/@lezer/markdown
+
+This is an incremental ~~markdown~~ txt2tags parser that integrates well with the
 [Lezer](https://lezer.codemirror.net/) parser system. It does not in
 fact use the Lezer runtime (that runs LR parsers, and Markdown can't
 really be parsed that way), but it produces Lezer-style compact syntax
