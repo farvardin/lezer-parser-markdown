@@ -14,7 +14,7 @@ do—specifically, it doesn't validate link references, so it'll parse
 declared.
 
 The
-[@farvardin/codemirror-lang-markdown](https://github.com/farvardin/codemirrorlang-markdown)
+[@farvardin/codemirror-lang-markdown](https://github.com/farvardin/codemirror-lang-markdown)
 package integrates this parser with CodeMirror to provide ~~Markdown~~ txt2tags editor support.
 
 The code is licensed under an MIT license.
