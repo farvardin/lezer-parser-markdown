@@ -1,14 +1,9 @@
 <!-- /README.md is generated from /src/README.md -->
 
-# @lezer/markdown
+# @farvardin/lezer-parser-markdown
 
-This is an incremental Markdown ([CommonMark](https://commonmark.org/)
-with support for extension) parser that integrates well with the
-[Lezer](https://lezer.codemirror.net/) parser system. It does not in
-fact use the Lezer runtime (that runs LR parsers, and Markdown can't
-really be parsed that way), but it produces Lezer-style compact syntax
-trees and consumes fragments of such trees for its incremental
-parsing.
+This is an incremental ~~Markdown~~ txt2tags parser that integrates well with the
+[Lezer](https://lezer.codemirror.net/) parser system. 
 
 Note that this only _parses_ the document, producing a data structure
 that represents its syntactic form, and doesn't help with outputting
@@ -19,9 +14,8 @@ do—specifically, it doesn't validate link references, so it'll parse
 declared.
 
 The
-[@codemirror/lang-markdown](https://github.com/codemirror/lang-markdown)
-package integrates this parser with CodeMirror to provide Markdown
-editor support.
+[@farvardin/codemirror-lang-markdown](https://github.com/farvardin/codemirrorlang-markdown)
+package integrates this parser with CodeMirror to provide ~~Markdown~~ txt2tags editor support.
 
 The code is licensed under an MIT license.
 
