@@ -1934,8 +1934,11 @@ function toRelative(abs: number, ranges: readonly {from: number, to: number}[]) 
 const markdownHighlighting = styleTags({
   "Blockquote/...": t.quote,
   HorizontalRule: t.contentSeparator,
-  "ATXHeading1/... SetextHeading1/...": t.heading1,
-  "ATXHeading2/... SetextHeading2/...": t.heading2,
+  // we disable setexheading
+  // "ATXHeading1/... SetextHeading1/...": t.heading1,
+  // "ATXHeading2/... SetextHeading2/...": t.heading2,
+  "ATXHeading1/...": t.heading1,
+  "ATXHeading2/...": t.heading2,
   "ATXHeading3/...": t.heading3,
   "ATXHeading4/...": t.heading4,
   "ATXHeading5/...": t.heading5,
