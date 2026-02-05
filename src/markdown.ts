@@ -298,10 +298,14 @@ function isOrderedList(line: Line, cx: BlockContext, breaking: boolean) {
   return pos + 1 - line.pos
 }
 
+// 35 #
+// 61 =
+
 function isAtxHeading(line: Line) {
-  if (line.next != 35 /* '#' */) return -1
+  if (line.next != 61 && line.next != 35) return -1
   let pos = line.pos + 1
-  while (pos < line.text.length && line.text.charCodeAt(pos) == 35) pos++
+  // while (pos < line.text.length && line.text.charCodeAt(pos) == 61) pos++
+  while ( pos < line.text.length && (line.text.charCodeAt(pos) === 61 || line.text.charCodeAt(pos) === 35) ) {   pos++;   }
   if (pos < line.text.length && line.text.charCodeAt(pos) != 32) return -1
   let size = pos - line.pos
   return size > 6 ? -1 : size
@@ -1487,6 +1491,11 @@ const DefaultInline: {[name: string]: (cx: InlineContext, next: number, pos: num
     let rightFlanking = !sBefore && (!pBefore || sAfter || pAfter)
     let canOpen = leftFlanking && (next == 42 || !rightFlanking || pBefore)
     let canClose = rightFlanking && (next == 42 || !leftFlanking || pAfter)
+    // 95 = _  5F   
+    // 47 = /  2F
+    // 42 = *  2A
+    // 35 = #  23 
+    // 61 = =  3D
     return cx.append(new InlineDelimiter(next == 95 ? EmphasisUnderscore : EmphasisAsterisk, start, pos,
                                          (canOpen ? Mark.Open : Mark.None) | (canClose ? Mark.Close : Mark.None)))
   },
